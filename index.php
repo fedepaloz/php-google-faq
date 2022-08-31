@@ -35,20 +35,20 @@ foreach($faqs as $key => $value)
     <title>Document</title>
 </head>
 <body>
-   <ul>
-   <?php foreach($faqs as $key => $value) : ?>
-   <li>
-    <h1> <?php echo ($key) ?> </h1>
-   </li>
-   <ul>
-    <?php foreach ($faqs as   $faq_paragraph) {
-    foreach ($faq_paragraph as $paragraph) 
-   
-     : ?>
-    <li><p> <?php echo($paragraph) ?></p></li>
+<ul>
+    <?php foreach ($faqs as $key => $value) : ?>
+        <li>
+            <h1><?php echo ($key) ?></h1>
+            <ul>
+                <?php foreach ($faqs as $faq_paragraph) {
+                foreach ($faq_paragraph as $paragraph)} : ?>
+                    <li>
+                        <p> <?php echo($paragraph) ?></p>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+        </li>
     <?php endforeach ?>
-   </ul>
-   <?php endforeach ?>
-   </ul>
+</ul> 
 </body>
 </html>
