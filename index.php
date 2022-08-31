@@ -15,12 +15,12 @@ $faqs = [
 } */
 
 
-foreach($faqs as $key => $value)
-{var_dump($key);
+foreach($faqs as $title => $value)
+{var_dump($title);
 var_dump($value);}
 
 
-foreach($faqs as $key => $value)
+foreach($faqs as $title => $value)
 
 
 ?>
@@ -36,16 +36,16 @@ foreach($faqs as $key => $value)
 </head>
 <body>
 <ul>
-    <?php foreach ($faqs as $key => $value) : ?>
+    <?php foreach ($faqs as $title => $paragraphs) : ?>
         <li>
-            <h1><?php echo ($key) ?></h1>
+            <h1><?php echo ($title) ?></h1>
             <ul>
-                <?php foreach ($faqs as $faq_paragraph) {
-                foreach ($faq_paragraph as $paragraph)} : ?>
+                <?php foreach ($paragraphs as $paragraph) : ?>
                     <li>
                         <p> <?php echo($paragraph) ?></p>
                     </li>
                 <?php endforeach ?>
+                
             </ul>
         </li>
     <?php endforeach ?>
